@@ -15,7 +15,7 @@
 	<context:annotation-config></context:annotation-config>
 	<!-- Se define en qué paquete están las clases que podrán tener anotaciones -->
 	<context:component-scan
-		base-package="controlador,dal,dto,impl"></context:component-scan>
+		base-package="controller,dal,dto,impl"></context:component-scan>
 
 	<!-- Se configura la configuración para la conexión a base de datos -->
 	<bean id="dataSource"
