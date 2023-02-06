@@ -7,10 +7,16 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Calendar;
+import java.util.List;
 import java.util.Scanner;
+import java.util.UUID;
 
+import dal.*;
+import dao.*;
+import impl.Consultas;
 /**
  * @author Pablo López
+ * FALTA TERMINAR EL MENU!!!!!
  *
  */
 public class Controller {
@@ -49,20 +55,22 @@ public class Controller {
 			System.out.print(" ➤ Escriba el numero de la opcion deseada: ");
 			Scanner scan = new Scanner(System.in);
 			seleccion = scan.nextInt();
-			Calendar fecha = Calendar.getInstance();
 
-			/*
-			// DTO para el pago repostaje
-			PagoRepostajeDTO DTO;
-			PagosRepostaje pagosRepostaje;
+			//DTOS
+			//DTO ALUMNOS
+			AlumnosDTO DTO;
+			Alumnos alumnos = new Alumnos();
+			//DTO ORDENADORES
+			OrdenadoresDTO DTO2;
+			Ordenadores ordenadores = new Ordenadores();
+			
 
-			// DTO para el control camiones
-			ControlCamionesDTO DTOCamiones;
-			ControlCamiones controlCamiones;
-			*/
+			
 
+			
+			
+			
 			switch (seleccion) {
-
 			case 1:
 				System.out.println("");
 				System.out.println("┌──────────────────────────────────────────────────────────┐");
@@ -137,7 +145,7 @@ public class Controller {
 
 			}
 			
-		} while (seleccion != 0);
+		} while (seleccion != 7);
 
 	}
 
